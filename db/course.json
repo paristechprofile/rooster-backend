@@ -1,0 +1,9 @@
+[
+    {
+        "name": "WDI",
+        "description": "Web Development Immersive - a course that teaches programming fundamentals", 
+        "location": "SF", 
+        "startDate": "Feb 22nd", 
+        "students": ["Paris", "DeJean", "Taylor"]
+    }
+]
