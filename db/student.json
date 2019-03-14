@@ -1,8 +1,23 @@
 [
     {
-        "name": "Paris Taylor",
+        "name": "Paris ",
         "age": 29, 
         "bio": "Future Developer", 
-        "DOB": "06/08/89" 
+        "DOB": "06/08/89",
+        "courseId": "WDI"
+    },
+    {
+        "name": "Dejean",
+        "age": 12, 
+        "bio": "Future UXer", 
+        "DOB": "06/08/89",
+        "courseId": "UXDI"
+    },
+    {
+        "name": "Taylor",
+        "age": 78, 
+        "bio": "Future Dexter's Laboratory", 
+        "DOB": "06/08/89",
+        "courseId": "DSI"
     }
 ]

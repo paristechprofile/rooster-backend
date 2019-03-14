@@ -1,7 +1,9 @@
 const 
     controllers = require('../controllers'),
     express = require('express'),
-    router = express.Router()
+    app = express()
 
-router.get('/', controllers.course.findAll);
-router.get('/:id', controllers.course.findById);
+app.get('/', controllers.course.findAll);
+app.get('/:id', controllers.course.findById);
+
+module.exports = app;
