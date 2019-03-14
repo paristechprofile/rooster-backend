@@ -6,6 +6,7 @@ const
         name: String,
         age: Number, 
         bio: String, 
-        DOB: String, 
+        DOB: String,
+        WDI: Boolean, DSI: Boolean, UXDI: Boolean
     })
 module.exports = mongoose.model('Student', StudentSchema)

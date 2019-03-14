@@ -4,5 +4,11 @@
         "age": 29, 
         "bio": "Future Developer", 
         "DOB": "06/08/89" 
+    },
+    {
+        "name": "DeJean Taylor",
+        "age": 29, 
+        "bio": "Future Developer", 
+        "DOB": "06/08/89" 
     }
 ]

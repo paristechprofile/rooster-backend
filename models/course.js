@@ -6,9 +6,11 @@ const
         name: String,
         description: String, 
         location: String, 
-        class: String, 
         dates: String, 
-        students: [String]
+        students: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Student'
+        }]
     })
 module.exports = mongoose.model('Course', CourseSchema)
 

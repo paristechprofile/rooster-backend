@@ -1,32 +1,34 @@
 const 
     db = require('../models'),
-    course = require('./course'),
-    student = require('./student')
+    courseData = require('./course'),
+    studentData = require('./student')
 
 db.Student.deleteMany({}, (err, students)=>{
-    if (err) {throw err};
-    console.log(`removed all`, students)
-    db.Student.create(student, (err, students)=>{
-        if (err) {throw err};
-        console.log(`adding`, students)
+    if (err) throw err;
+    db.Student.create(studentData, (err, students)=>{
+        if (err) throw err;
         db.Course.deleteMany({},(err,courses)=>{
-            if (err) {throw err};
-            console.log(`removed all`, courses)
-            course.forEach(course => {
-                let newCourse = new db.Course({
-                    name: course.name,
-                    description: course.description,
-                    location: course.location,
-                    startDate: course.startDate
-                })
-                db.Student.findOne({name: student.name}, (err, foundStudent)=>{
-                    if (err) {throw err};
-                    newCourse.student = foundStudent;
-                    newCourse.save((err, savedCourse) =>{
-                        if (err) {throw err};
-                        console.log(`enrolled ${savedCourse.student} into ${savedCourse.name}`)
-                    });
-                });       
+            if (err) throw err;
+            db.Course.create(courseData, (err, courses)=>{
+                if (err) throw err;
+                courseData.find(courseData =>{
+                    let newCourse = new db.Course({
+                        name: courseData.name,
+                        description: courseData.description,
+                        location: courseData.location,
+                        dates: courseData.dates,
+                        });
+                    studentData.forEach(student =>{
+                        db.Student.find((err, foundStudents)=>{
+                        if (err) throw err;
+                        newCourse.students = foundStudents;
+                        newCourse.students.push(student)
+                        console.log(newCourse.students);
+                        })
+                    })
+                    newCourse.save()
+                    console.log(newCourse)
+                });
             });
         });
     });
