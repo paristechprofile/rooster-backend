@@ -4,20 +4,20 @@
         "description": "Web Development Immersive - a course that teaches programming fundamentals", 
         "location": "SF", 
         "startDate": "Feb 22nd", 
-        "studentId": []
+        "students": ["Paris", "Dalton", "Isha", "Brock"]
     },
     {
         "name": "DSI",
         "description": "Data Science Immersive - a course that teaches data science fundamentals", 
         "location": "SF", 
         "startDate": "Mar 22nd", 
-        "studentId": []
+        "students": ["Bill Murray", "Bob Dylan", "James Blake"]
     },
     {
         "name": "UXDI",
         "description": "User Experience and Design Immersive - a course that teaches UX/UI fundamentals", 
         "location": "SF", 
         "startDate": "April 22nd", 
-        "studentId": []
+        "students": ["Lemony Snickett", "Solange", "Taylor"]
     }
 ]

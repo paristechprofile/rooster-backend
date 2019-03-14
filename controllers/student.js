@@ -4,14 +4,16 @@ const
 module.exports = {
     findAll: (req,res)=>{
         db.Student.find({}, (err, foundStudents) =>{
-            if(err) {throw err};
-            res.json(foundStudents);
+            if(err) {
+                console.log('error retriving students', err)
+            } res.json(foundStudents);
         });
     },
     findById: (req,res)=>{
         db.Student.find({_id: req.params.id}, (err,foundStudent)=>{
-            if (err) {throw err};
-            res.json(foundStudent);
+            if (err){
+                console.log('error retrieving student', err)
+            } res.json(foundStudent);
         });
     },
     addStudent: (req,res)=>{

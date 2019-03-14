@@ -1,7 +1,7 @@
 {
   "name": "rooster-backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,7 +12,6 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "install": "^0.12.2",
     "mongoose": "^5.4.19"
   },
   "devDependencies": {},
