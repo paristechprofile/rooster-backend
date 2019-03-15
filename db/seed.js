@@ -25,7 +25,7 @@ db.Student.deleteMany({}, (err, students)=>{
                     newCourse.students = foundStudent;
                     newCourse.save((err, savedCourse) =>{
                         if (err) {throw err};
-                        console.log(newCourse)
+                        console.log(savedCourse)
                         // console.log(`enrolled ${savedCourse.student} into ${savedCourse.name}`)
                     });
                 });       
